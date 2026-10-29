@@ -1,0 +1,243 @@
+/* ==========================================================
+   01. CONFIGURAÇÕES GERAIS
+   ========================================================== */
+
+body {
+
+    background-color: #F4F6F8;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding-top: 100px;
+}
+
+
+/* ==========================================================
+   02. LENIS - ROLAGEM SUAVE
+   ========================================================== */
+
+html.lenis,
+html.lenis body {
+
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+
+    scroll-behavior: auto !important;
+}
+
+
+/* ==========================================================
+   03. NAVBAR
+   ========================================================== */
+
+/* Cor principal da Navbar */
+
+.bg-NavOlsen {
+
+    background-color: #026931 !important;
+}
+
+
+/* Animação dos links da Navbar */
+
+.navbar-nav .nav-link {
+
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+
+    transform: scale(1.15);
+}
+
+
+/* ==========================================================
+   04. BOTÕES
+   ========================================================== */
+
+/* Efeito padrão dos botões */
+
+.btn-mouse {
+
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.btn-mouse:hover {
+
+    transform: scale(1.1);
+}
+
+
+/* ==========================================================
+   05. ÂNCORA DA NAVBAR
+   ========================================================== */
+
+/* 
+   Evita que o conteúdo fique escondido atrás da Navbar
+*/
+
+div[id] {
+
+    scroll-margin-top: 90px;
+}
+
+
+/* ==========================================================
+   06. QUALIDADES
+   ========================================================== */
+
+.bg-qualidade {
+
+    background-color: #EBF0F5;
+}
+
+
+/* ==========================================================
+   07. CARDS
+   ========================================================== */
+
+/* 
+   Cards do sobre
+*/
+
+.card-size {
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 
+   Cards do catálogo
+*/
+
+.card-catalogo {
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* 
+   Efeito hover dos cards do catálogo.
+*/
+
+.card-catalogo-link:hover .card-catalogo {
+
+    transform: translateY(-8px) scale(1.03);
+
+    box-shadow:
+        0 12px 24px rgba(0, 149, 67, 0.2) !important;
+}
+
+
+/* ==========================================================
+   08. CARROSSEL DE MARCAS
+   ========================================================== */
+
+/* Área externa do carrossel */
+
+.carrossel-marcas {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    height: 100px;
+
+    overflow: visible;
+}
+
+
+/* Lista de logos */
+
+.lista-logos {
+
+    display: flex;
+    align-items: center;
+
+    gap: 150px;
+    padding-right: 40px;
+
+    animation: mover 40s linear infinite;
+}
+
+
+/* Imagens das marcas */
+
+.lista-logos img {
+
+    height: 170px;
+    width: auto;
+
+    object-fit: contain;
+
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+
+/* ==========================================================
+   09. ANIMAÇÃO DO CARROSSEL DE MARCAS
+   ========================================================== */
+
+@keyframes mover {
+
+    from {
+
+        transform: translateX(0);
+    }
+
+    to {
+
+        transform: translateX(-100%);
+    }
+}
+
+
+/* ==========================================================
+   10. BOTÃO FLUTUANTE DO WHATSAPP
+   ========================================================== */
+
+.whats-icon {
+
+    background-image: url('OutrasImagens/WhatsIcon.jpg');
+    background-size: cover;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    bottom: 20px;
+    right: 20px;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 12px 24px rgba(0, 149, 67, 0.5) !important;
+
+    animation: pulsar 1s infinite alternate;
+}
+
+
+/* ==========================================================
+   11. ANIMAÇÃO DO BOTÃO WHATSAPP
+   ========================================================== */
+
+@keyframes pulsar {
+
+    0% {
+
+        transform: scale(1);
+    }
+
+    100% {
+
+        transform: scale(1.06);
+    }
+}
